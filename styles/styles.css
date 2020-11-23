@@ -40,6 +40,7 @@
 }
 
 .labels-item .text {
+  display: none;
   font-size: 14px;
   font-weight: 400;
   margin: 0;
@@ -62,5 +63,9 @@
 @media screen and (min-width: 768px) {
   .countdown {
     max-width: 300px;
+  }
+
+  .labels-item .text {
+    display: blocks;
   }
 }
