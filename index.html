@@ -8,16 +8,27 @@
     <title>Countdown</title>
   </head>
   <body>
-    <div id="countdown">
+    <div class="countdown" id="countdown">
       <h2 class="countdowt-title">Осталось</h2>
-      <div id="tiles"></div>
+      <!-- <div class="tiles" id="tiles"></div> -->
       <ul class="labels">
-        <li>дней</li>
-        <li>часов</li>
-        <li>минут</li>
-        <li>секунд</li>
+        <li class="labels-item">
+          <p class="digits" id="days">00</p>
+          <p class="text">дней</p>
+        </li>
+        <li class="labels-item">
+          <p class="digits" id="hrs">00</p>
+          <p class="text">часов</p>
+        </li>
+        <li class="labels-item">
+          <p class="digits" id="mins">00</p>
+          <p class="text">минут</p>
+        </li>
+        <li class="labels-item">
+          <p class="digits" id="secs">00</p>
+          <p class="text">секунд</p>
+        </li>
       </ul>
-      <progress class="countdown-progress-bar" value="" max=""></progress>
     </div>
 
     <script src="./js/countdown.js"></script>

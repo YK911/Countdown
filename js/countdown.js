@@ -4,6 +4,10 @@ let days,
   minutes,
   seconds; // переменные для единиц времени
 const countdown = document.getElementById('tiles'); // элемент тега
+const day = document.getElementById('days')
+const hrs = document.getElementById('hrs')
+const mins = document.getElementById('mins')
+const secs = document.getElementById('secs')
 
 setInterval(() => getCountdown(), 1000);
 
@@ -23,36 +27,14 @@ function getCountdown() {
   seconds = pad(parseInt(secondsLeft % 60));
 
   // строка обратного отсчета + значение тега
-  countdown.innerHTML = `<span>${days}</span><span class="dots">:</span>
-    <span>${hours}</span><span class="dots">:</span><span>${minutes}</span><span class="dots">:</span><span>${seconds}</span>`;
 
-  setProgress(currentDate, targetDate)
+  day.textContent = `${days}`
+  hrs.textContent = `${hours}`
+  mins.textContent = `${minutes}`
+  secs.textContent = `${seconds}`
+
 }
 
 function pad(n) {
   return (n < 10 ? '0' : '') + n;
 }
-
-function setProgress(current, target) {
-
-  let end = target / 1000
-  current = Math.round(current / 1000)
-  const diff = end - current
-
-  
-  const progressBar = document.querySelector('.countdown-progress-bar'); // получить элемент прогресс бар
-  
-  progressBar.value = diff
-
-  let intervalId = setInterval(() => {
-
-    if (end <= 0) {
-      clearInterval(intervalId)
-    } else {
-
-    }
-
-  }, target)
-
-}
-
